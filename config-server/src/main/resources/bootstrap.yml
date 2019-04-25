@@ -1,0 +1,20 @@
+server:
+  port: 6098
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #配置git仓库地址
+          uri: https://github.com/LinWoodDavid/springcloud-config
+          #配置仓库路径
+          search-paths: cloud-config
+          #远程仓库公开不用填写用户名密码
+          #访问git仓库的用户名
+          username:
+          #访问git仓库的用户密码
+          password:
+      #配置仓库的分支
+      label: master
+  application:
+    name: config-server
