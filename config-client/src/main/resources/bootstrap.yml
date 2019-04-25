@@ -8,7 +8,23 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:6098/
-
+    #bus 配置
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  #rabbitmq 配置
+  rabbitmq:
+    host: 47.98.108.122
+    port: 5672
+    username: LinWood_David
+    password: 123456
+#eureka 配置
+eureka:
+  client:
+    serviceUrl:
+      #注明自己的服务注册中心的地址
+      defaultZone: http://localhost:6080/eureka/
 management:
   endpoints:
     web:
