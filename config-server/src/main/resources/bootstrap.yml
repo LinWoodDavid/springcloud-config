@@ -18,3 +18,9 @@ spring:
       label: master
   application:
     name: config-server
+management:
+  endpoints:
+    web:
+      exposure:
+        #动态刷新
+        include: refresh

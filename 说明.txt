@@ -1,0 +1,15 @@
+======================================config-server======================================
+浏览器访问	http://localhost:6098/foo/dev
+{"name":"foo","profiles":["dev"],"label":null,"version":"a58a0f1b66e2348ce5cc0fdb8240df35544413e0","state":null,"propertySources":[]}
+
+======================================config-client======================================
+********************************************注意*************************************************
+将config-client中的配置文件“application”改成“bootstrap”否则将会默认请求http://localhost:8888/ 端口而不是配置上面的
+因为将配置文件改名为 ：bootstrap ，默认加载的配置是按这个bootstrap文件名来的，看下ConfigServerBootstrapConfiguration这个源码
+********************************************注意*************************************************
+浏览器访问	http://localhost:6090/hello 显示foo=foo ,version=6
+======================================spring-cloud-config-手动刷新======================================
+更改github上面的文件 将version=6改为7并保存
+使用post请求访问http://localhost:6090/actuator/refresh 请求头Content-Type为application/json
+再次访问http://localhost:6090/hello 显示foo=foo ,version=7
+===========================================================================================
