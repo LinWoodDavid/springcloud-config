@@ -1,5 +1,5 @@
 server:
-  port: 6090
+  port: 6091
 spring:
   application:
     name: config-client
@@ -10,9 +10,8 @@ spring:
       uri: http://localhost:6098/
     #bus 配置
     bus:
-      enabled: true
       trace:
-        enabled: true
+        enabled: true #开启消息跟踪
   #rabbitmq 配置
   rabbitmq:
     host: 47.98.108.122
@@ -25,6 +24,8 @@ eureka:
     serviceUrl:
       #注明自己的服务注册中心的地址
       defaultZone: http://localhost:6080/eureka/
+#  instance:
+#    prefer-ip-address: true
 management:
   endpoints:
     web:

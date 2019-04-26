@@ -6,9 +6,7 @@ spring:
       server:
         git:
           #配置git仓库地址
-          uri: https://github.com/LinWoodDavid/springcloud-config
-          #配置仓库路径
-          search-paths: cloud-config
+          uri: https://github.com/LinWoodDavid/my-configuration
           #远程仓库公开不用填写用户名密码
           #访问git仓库的用户名
           username:
@@ -18,6 +16,22 @@ spring:
       label: master
   application:
     name: config-server
+  #rabbitmq 配置
+  rabbitmq:
+    host: 47.98.108.122
+    port: 5672
+    username: LinWood_David
+    password: 123456
+#eureka 配置
+eureka:
+  instance:
+    prefer-ip-address: true # 开启健康检查（需要spring-boot-starter-actuator依赖）
+    lease-expiration-duration-in-seconds: 90 #续约到期时间(单位 S)默认是90S
+    lease-renewal-interval-in-seconds: 30 # 续约更新时间间隔（默认30秒）
+  client:
+    serviceUrl:
+      #注明自己的服务注册中心的地址
+      defaultZone: http://localhost:6080/eureka/
 management:
   endpoints:
     web:
