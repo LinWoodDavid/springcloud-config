@@ -7,7 +7,7 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:6098/
+      uri: http://47.98.108.122:6098/
     #bus 配置
     bus:
       trace:
@@ -23,7 +23,7 @@ eureka:
   client:
     serviceUrl:
       #注明自己的服务注册中心的地址
-      defaultZone: http://localhost:6080/eureka/
+      defaultZone: http://47.98.108.122:6080/eureka/
 #  instance:
 #    prefer-ip-address: true
 management:
