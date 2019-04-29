@@ -17,3 +17,13 @@
 nohup java -jar config-client-6091.jar > config-client-6091.log 2>&1 &
 nohup java -jar config-server-6098.jar > config-server-6098.log 2>&1 &
 nohup java -jar eureka-server-6080.jar > eureka-server-6080.log 2>&1 &
+
+        Condition condition = new Condition(MrhmiAlarmCode.class);
+        condition.orderBy("warningCode");
+        List<MrhmiAlarmCode> list = mrhmiAlarmCodeMapper.selectByCondition(condition);
+		
+nohup java -jar mrhmi-0.0.1-SNAPSHOT.jar > 2019-4-29.log 2>&1 &
+
+changePhone，请求参数：[org.apache.catalina.connector.RequestFacade@751d1e61, 257902, 15888845764, 13774487520]
+
+[org.apache.catalina.connector.RequestFacade@751d1e61, 13777487520, 15888845764]
