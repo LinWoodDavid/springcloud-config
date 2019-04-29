@@ -13,10 +13,11 @@
 使用post请求访问http://localhost:6090/actuator/bus-refresh 请求头Content-Type为application/json
 再次访问http://localhost:6090/hello 显示foo=foo ,version=7
 ===========================================================================================
-
+后台运行jar包命令
 nohup java -jar eureka-server-6080.jar > eureka-server-6080.log 2>&1 &
 nohup java -jar config-server-6098.jar > config-server-6098.log 2>&1 &
 nohup java -jar config-client-6091.jar > config-client-6091.log 2>&1 &
+nohup java -jar config-client-6092.jar > config-client-6092.log 2>&1 &
 
 <<<<<<< HEAD
 
